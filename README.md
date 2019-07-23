@@ -17,7 +17,7 @@
   - queries folder:
     - getData.js
     - postUser.js
-- config.envPublic folder
+- config.env
 
 ### Flow
 
