@@ -1,0 +1,34 @@
+{
+  "name": "Football_teams",
+  "version": "1.0.0",
+  "description": "### About :",
+  "main": "index.js",
+  "scripts": {
+    "test": "node src/test.js",
+    "dev": "nodemon src/server.js",
+    "eslint": "eslint src/*",
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fack2/Football_teams.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fack2/Football_teams/issues"
+  },
+  "homepage": "https://github.com/fack2/Football_teams#readme",
+  "devDependencies": {
+    "nodemon": "^1.19.1",
+    "tap-spec": "^5.0.0",
+    "tape": "^4.11.0"
+  },
+  "dependencies": {
+    "env2": "^2.2.2",
+    "eslint": "^6.1.0",
+    "request": "^2.88.0",
+    "supertest": "^4.0.2"
+  }
+}
