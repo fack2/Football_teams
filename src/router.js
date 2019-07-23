@@ -4,7 +4,9 @@ const router = (request, response) => {
 
   if (pathname == "/") {
     return homePage(request, response);
-  } else if (pathname.includes(".")) {
+  } else if (
+    ["jpg", "html", "ico", "js", "png", "css"].includes(pathname.split(".")[1])
+  ) {
     return publicHandler(request, response, pathname);
   } else {
     return notFound(request, response);
