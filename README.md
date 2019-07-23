@@ -25,7 +25,7 @@ As a user, I will be able to:
 - Public folder:
   - index.html
   - style.css
-    -script.js
+  - script.js
 - Src folder:
   - server.js
   - router.js
