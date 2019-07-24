@@ -1,10 +1,10 @@
-const fs = require("fs")
+const fs = require('fs');
 
-const dbConnection = require("./db_connection");
+const dbConnection = require('./db_connection');
 
 const sql = fs.readFileSync(`${__dirname}/db_build.sql`).toString();
 
 dbConnection.query(sql, (err, res) => {
   if (err) throw err;
-  console.log("football teams table created with result: ", res);
+  console.log('football teams table created with result: ', res);
 });
