@@ -10,7 +10,7 @@ CREATE TABLE countries(
 CREATE TABLE teams(
   id SERIAL PRIMARY KEY ,
   id_countries int,
- FOREIGN KEY (id_countries) REFERENCES countries(id_countries),
+  FOREIGN KEY (id_countries) REFERENCES countries(id_countries),
   team_name TEXT NOT NULL,
   logo TEXT,
   description TEXT NOT NULL
