@@ -1,11 +1,14 @@
 const path = require("path");
 const fs = require("fs");
-require("env2")(".env");
+const url = require("url");
+const queryString = require("querystring");
 const request = require("request");
+const getData = require("./queries/getData.js");
 
 const homePage = (req, res) => {
   const homePagePath = path.join(__dirname, "..", "public/index.html");
-  fs.readFile(homePagePath, (err, data) => {
+
+  fs.readFile(homePagePath, (err, file) => {
     if (err) {
       res.writeHead(500, {
         "Content-Type": "text/html"
@@ -15,7 +18,7 @@ const homePage = (req, res) => {
     res.writeHead(200, {
       "Content-Type": "text/html"
     });
-    res.end(data);
+    res.end(file);
   });
 };
 
@@ -40,11 +43,24 @@ const publicHandler = (request, response, url) => {
     }
   });
 };
+const getTeamData = (request, response) => {
+  const value = request.url.split("=")[1];
+  getData(value, (err, res) => {
+    if (err) return serverError(err, res);
+    response.writeHead(200, { "Content-Type": "application/json" });
+    response.end(JSON.stringify(res));
+  });
+};
 
 const notFound = (req, res) => {
   res.writeHead(404, {
     "Content-Type": "text/html"
   });
-  res.end(`<h1>ERRORE 404 <br> Page Not Found</h1>`);
+  res.end("<h1>ERRORE 404 <br> Page Not Found</h1>");
 };
-module.exports = { homePage, publicHandler, notFound };
+module.exports = {
+  homePage,
+  publicHandler,
+  notFound,
+  getTeamData
+};
