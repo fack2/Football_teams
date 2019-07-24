@@ -1,6 +1,6 @@
 const { Pool } = require("pg");
 
-require("env2")("./config.env");
+require("env2")("config.env");
 // connectionString
 // this will allow us to connect to the database
 const connectionString = process.env.DB_URL;
