@@ -1,6 +1,6 @@
-const input = document.getElementById('search');
+const input = document.getElementById("search");
 
-const search = document.getElementById('submit');
+const search = document.getElementById("submit");
 
 const req = (url, cb) => {
   fetch(url)
@@ -9,9 +9,9 @@ const req = (url, cb) => {
     .catch(error => error);
 };
 
-req('/search', (data) => {
-  if (input.value === '') {
-    alert('please enter the country');
+req("/search", data => {
+  if (input.value === "") {
+    alert("please enter the country");
   }
 });
 
