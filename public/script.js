@@ -14,23 +14,3 @@ req("/search", data => {
     alert("please enter the country");
   }
 });
-
-//
-// search.addEventListener("click", event => {
-// if (input.value === "") {
-// alert("please enter the country");
-// } else {
-// input.textContent = "";
-// fetch(/search ${input.value})
-// .then(response => {
-// return response.json();
-// })
-// .then((data)=>{
-// data.forEach(element => {
-//
-//
-//
-//       });
-//   });
-// }
-// });
