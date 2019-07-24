@@ -2,7 +2,7 @@
 
 ### About :
 
-our website allows user to search about football, teams in specific country, displays the teams in this country, and some details about it.
+our website allows user to search about football, teams in specific country (Spain , England), displays the teams in this country, and some details about it.
 
 ### User journey:
 
