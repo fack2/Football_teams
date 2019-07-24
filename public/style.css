@@ -1,6 +1,5 @@
 body {
   font-family: Arial;
-  margin-top: 20%;
 }
 
 * {
@@ -15,12 +14,10 @@ form.search input[type="text"] {
   width: 80%;
   background: #f1f1f1;
   border-radius: 10px;
-
 }
 
 form.search button {
-    border-radius: 10px;
-
+  border-radius: 10px;
   width: 20%;
   padding: 10px;
   background: #2196f3;
@@ -42,6 +39,8 @@ form.search::after {
 }
 
 .search {
+ 
   margin: auto;
+  margin-top: 40%;
   max-width: 300px;
 }
