@@ -32,7 +32,7 @@ const publicHandler = (request, response, url) => {
     png: "image/png",
     ico: "image/x-icon"
   };
-  const filePath = path.join(__dirname, "../public", url);
+  const filePath = path.join(__dirname, "..", url);
   fs.readFile(filePath, (error, file) => {
     if (error) {
       response.writeHead(500, { "Content-Type": "text/html" });
@@ -45,6 +45,7 @@ const publicHandler = (request, response, url) => {
 };
 const getTeamData = (request, response) => {
   const value = request.url.split("=")[1];
+  console.log("value", value);
   getData(value, (err, res) => {
     if (err) return serverError(err, res);
     response.writeHead(200, { "Content-Type": "application/json" });
