@@ -1,6 +1,5 @@
 const path = require("path");
 const fs = require("fs");
-
 const getData = require("./queries/getData.js");
 
 const homePage = (req, res) => {
