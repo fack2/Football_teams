@@ -1,6 +1,8 @@
 const input = document.getElementById("search");
 const search = document.getElementById("submit");
 const sec = document.getElementById("sec");
+let ul = document.createElement("ul");
+ul.setAttribute("id", "list");
 function req(url, cb) {
   fetch(url)
     .then(response => {
@@ -24,8 +26,7 @@ search.addEventListener("click", event => {
       if (err) return console.log(err);
       else {
         console.log("data fe", data);
-        let ul = document.createElement("ul");
-        ul.setAttribute("id", "list");
+
         ul.textContent = "";
         let details;
         details = document.createElement("div");
@@ -62,11 +63,13 @@ search.addEventListener("click", event => {
               counter--;
             }
           });
+
           ul.appendChild(li);
         });
 
         sec.appendChild(ul);
       }
     });
+    list.textContent = "";
   }
 });
