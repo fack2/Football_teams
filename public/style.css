@@ -41,5 +41,34 @@ form.search::after {
 .search {
   margin: auto;
   margin-top: 40%;
-  max-width: 300px;
+  max-width: 322px;
+  width: 82%;
+}
+li {
+  margin: auto;
+  margin-top: 40%;
+  max-width: 322px;
+  width: 82%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: inherit;
+  margin-right: 15%;
+}
+.showBtn {
+  border-radius: 50%;
+  border: 1px solid salmon;
+  background: #7c308a;
+  height: 30px;
+  width: 33px;
+  margin-left: 5%;
+}
+.image {
+  height: 20%;
+  margin-top: 20%;
+  width: 50%;
+}
+.para {
+  margin: 10% 10% 10% -41%;
+  text-align: justify;
 }
