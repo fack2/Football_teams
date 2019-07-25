@@ -35,11 +35,12 @@ search.addEventListener("click", event => {
           li.setAttribute("class", "item");
           let teamName = document.createTextNode(e.team_name);
           let show = document.createElement("Button");
-          show.innerText = "click";
+          show.innerText = "🔻";
           show.setAttribute("class", "showBtn");
           li.appendChild(teamName);
           li.appendChild(show);
           let counter = 0;
+          input.value = "";
           show.addEventListener("click", function(ev) {
             if (counter % 2 == 0) {
               counter++;
